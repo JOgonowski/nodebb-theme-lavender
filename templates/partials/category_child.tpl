@@ -2,7 +2,6 @@
 	<meta itemprop="name" content="{../name}">
 
 	<div class="category-icon">
-
 		<!-- IF ../link -->
 		<a style="color: {../color};" href="{../link}" itemprop="url">
 		<!-- ELSE -->
@@ -14,10 +13,11 @@
 					<!-- IF ../backgroundImage -->background-image: url({../backgroundImage});<!-- ENDIF ../backgroundImage -->
 					<!-- IF ../bgColor -->background-color: {../bgColor};<!-- ENDIF ../bgColor -->
 					color: {../color};
+					background-color: #eddbb2;
 				"
 			>
 				<!-- IF !../link -->
-				<span class="badge {../unread-class}"><i class="fa fa-book" data-toggle="tooltip" title="[[global:topics]]"></i> <span class="human-readable-number" title="{../totalTopicCount}">{../totalTopicCount}</span>&nbsp; <i class="fa fa-pencil" data-toggle="tooltip" title="[[global:posts]]"></i> <span class="human-readable-number" title="{../totalPostCount}">{../totalPostCount}</span></span>
+				<span class="badge {../unread-class}"><span class="badge__label">[[global:topics]]</span>&nbsp;<span class="badge__number human-readable-number" title="{../totalTopicCount}">{../totalTopicCount}</span>&nbsp;&nbsp;<span class="badge__label">[[global:posts]]</span>&nbsp;<span class="badge__number human-readable-number" title="{../totalPostCount}">{../totalPostCount}</span></span>
 				<!-- ENDIF !../link -->
 
 				<!-- IF ../icon -->
@@ -27,7 +27,7 @@
 		</a>
 
 		<div class="category-box">
-			<div class="category-info">
+			<div class="category-info category-info--ngo">
 				<!-- IF ../link -->
 				<a href="{../link}" itemprop="url">
 				<!-- ELSE -->
@@ -41,7 +41,7 @@
 			<!-- IF !../link -->
 			<!-- BEGIN posts -->
 			<div component="category/posts" class="post-preview clearfix">
-				<strong><a href="{config.relative_path}/topic/{../topic.slug}">{../topic.title}</a></strong>
+				<a href="{config.relative_path}/topic/{../topic.slug}">{../topic.title}</a>
 				<hr/>
 				<a style="color: {../color};" href="<!-- IF ../user.userslug -->{config.relative_path}/user/{../user.userslug}<!-- ELSE -->#<!-- ENDIF ../user.userslug -->">
 					<!-- IF ../user.picture -->
@@ -51,14 +51,14 @@
 					<!-- ENDIF ../user.picture -->
 				</a>
 				<div class="post-preview-content">
-
+            <a style="color: {../color};" href="<!-- IF ../user.userslug -->{config.relative_path}/user/{../user.userslug}<!-- ELSE -->#<!-- ENDIF ../user.userslug -->"></a>
 					<div class="content">
 					{../content}
 					</div>
 					<p class="fade-out"></p>
 				</div>
 
-				<span class="pull-right post-preview-footer">
+				<span class="post-preview-footer">
 					<span class="timeago" title="{../timestampISO}"></span> &bull;
 					<a href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">[[global:read_more]]</a>
 				</span>
@@ -67,4 +67,7 @@
 			<!-- ENDIF !../link -->
 		</div>
 	</div>
+	<!-- BEGIN children -->
+    	{categories.children.whatever}
+    <!-- END children -->
 </div>

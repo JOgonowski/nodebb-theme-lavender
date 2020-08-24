@@ -1,11 +1,11 @@
 {
-  "name": "nodebb-theme-lavender",
-  "version": "5.0.11",
-  "description": "Lavender Theme for NodeBB",
+  "name": "nodebb-theme-lavenderngo",
+  "version": "1.0.0",
+  "description": "LavenderNGO Theme for NodeBB",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NodeBB/nodebb-theme-lavender"
+    "url": "https://github.com/JOgonowski/nodebb-theme-lavenderngo"
   },
   "keywords": [
     "nodebb",
@@ -14,12 +14,12 @@
     "themes"
   ],
   "author": {
-    "name": "psychobunny",
-    "email": "psycho.bunny@hotmail.com"
+    "name": "",
+    "email": ""
   },
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/NodeBB/nodebb-theme-lavender/issues"
+    "url": "https://github.com/JOgonowski/nodebb-theme-lavenderngo/issues"
   },
   "nbbpm": {
     "compatibility": "^1.4.4"
