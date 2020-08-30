@@ -13,7 +13,6 @@
 					<!-- IF ../backgroundImage -->background-image: url({../backgroundImage});<!-- ENDIF ../backgroundImage -->
 					<!-- IF ../bgColor -->background-color: {../bgColor};<!-- ENDIF ../bgColor -->
 					color: {../color};
-					background-color: #eddbb2;
 				"
 			>
 				<!-- IF !../link -->
@@ -41,7 +40,7 @@
 			<!-- IF !../link -->
 			<!-- BEGIN posts -->
 			<div component="category/posts" class="post-preview clearfix">
-				<a href="{config.relative_path}/topic/{../topic.slug}">{../topic.title}</a>
+				<a class="ngo-category-posts-preview" href="{config.relative_path}/topic/{../topic.slug}">{../topic.title}</a>
 				<hr/>
 				<a style="color: {../color};" href="<!-- IF ../user.userslug -->{config.relative_path}/user/{../user.userslug}<!-- ELSE -->#<!-- ENDIF ../user.userslug -->">
 					<!-- IF ../user.picture -->

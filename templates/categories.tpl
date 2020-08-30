@@ -2,7 +2,7 @@
 <div class="<!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length --> clearfix">
 		<div class="row">
             {{{each categories}}}
-            <div class="col-xs-12">
+            <div class="col-xs-12 ngo-category">
 
                 {function.console_logger_ngo}
                 <h2 class="ngo-category-name">{{categories.name}}</h2>
