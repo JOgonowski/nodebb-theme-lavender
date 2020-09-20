@@ -1,4 +1,6 @@
 body {
+	-webkit-font-smoothing: antialiased;
+
 	@media (min-width: 979px)
 	{
 		padding-top: 150px;
@@ -15,6 +17,8 @@ body {
 	&-navbar {
 		padding-top: 30px;
 		background-color: #f2bc62;
+		box-shadow: none;
+		border-bottom: none;
 
 		@media (max-width: 767px) {
 			padding-top: 10px;
@@ -47,6 +51,15 @@ body {
 			}
 		}
 
+		.navigation-link .unread-count {
+			position: absolute;
+			top: 5px;
+			right: -3px;
+
+			&::after {
+				position: static;
+			}
+		}
 	}
 
 	&-forum-title {
@@ -57,6 +70,10 @@ body {
 		font-size: 18px;
 		font-weight: 700;
 		color: @cMainFg;
+
+		&.navbar-brand, &.forum-title, &.navbar-brand.forum-title {
+			color: @cMainFg;
+		}
 
 		@media (min-width: 768px) and (max-width: 991px) {
 			max-width: 110px;
@@ -114,6 +131,15 @@ body {
 	}
 }
 
+.navbar-default .ngo-navbar-nav.navbar-nav.navbar-right>li>a,
+.navbar-default .ngo-navbar-nav.navbar-nav.navbar-right>li>a:focus,
+.navbar-default .ngo-navbar-nav.navbar-nav.navbar-right>li>a:hover,
+.navbar-default .ngo-navbar-nav.navbar-nav.navbar-right>.active>a,
+.navbar-default .ngo-navbar-nav.navbar-nav.navbar-right>.active>a:focus,
+.navbar-default .ngo-navbar-nav.navbar-nav.navbar-right>.active>a:hover {
+	font-size: 18px;
+}
+
 .ngo-category {
 	margin: 0 auto 120px;
 }
@@ -134,8 +160,8 @@ body {
 }
 
 .ui-autocomplete-input {
-	background-color: deeppink !important;
-	border: 2px solid yellow !important;
+	// background-color: deeppink !important;
+	// border: 2px solid yellow !important;
 }
 
 [data-widget-area="sidebar"] {
@@ -161,6 +187,13 @@ body {
 	&-section {
 		&:not(:last-child) {
 			margin-bottom: 80px;
+		}
+
+		.avatar.avatar-sm {
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			line-height: 32px;
 		}
 	}
 

@@ -66,7 +66,4 @@
 			<!-- ENDIF !../link -->
 		</div>
 	</div>
-	<!-- BEGIN children -->
-    	{categories.children.whatever}
-    <!-- END children -->
 </div>
